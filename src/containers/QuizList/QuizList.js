@@ -20,9 +20,13 @@ export default class QuizList extends Component {
   }
 
   componentDidMount() {
-    axios.get('https://react-quiz-3e9b0.firebaseio.com/quiz.json').then(response => {
-      console.log(response)
-    })
+    axios
+      .get(
+        "https://react-quiz-26c19-default-rtdb.europe-west1.firebasedatabase.app/quiz.json"
+      )
+      .then((response) => {
+        console.log(response);
+      });
   }
 
   render() {
